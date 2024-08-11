@@ -15,6 +15,8 @@
     />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/index.css" />
+    <script src="js/components/CardTreatment.js" async></script>
+    <script src="js/components/CardTestimonial.js" async></script>
     <title>Document</title>
   </head>
   <body>
@@ -142,11 +144,6 @@
                   <span></span>
                 </span>
               </div>
-              <!-- <div id="menu-button">
-                <span id="open-menu-icon" class="material-symbols-rounded">
-                  menu
-                </span>
-              </div> -->
             </div>
           </div>
 
@@ -319,79 +316,60 @@
         <div class="section">
           <div class="scroller fade-in">
             <div class="scroller-inner">
-              <div class="card">
-                <div class="card-content">
-                  <div class="testimonial-label">
-                    <span class="label">"Dr. Mu is an</span
-                    ><span class="label alt accent"> exceptional </span
-                    ><span class="label"> practitioner...</span>
-                  </div>
-                  <div class="p">
-                    Initially he helped me rid 15 years of debilitating
-                    migraines. I now have over a decade with zero migraines.”
-                  </div>
-                  <div class="p">Kim W.</div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-content">
-                  <div class="testimonial-label">
-                    <span class="label">"I had a</span
-                    ><span class="label alt accent"> great </span
-                    ><span class="label"> experience...</span>
-                  </div>
-                  <div class="p">
-                    He did a remarkable job helping me with my problems with my
-                    cycle... I always recommend him to family and friends--he’s
-                    just the best!”
-                  </div>
-                  <div class="p">Megan S.</div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-content">
-                  <div class="testimonial-label">
-                    <span class="label">"He is</span
-                    ><span class="label alt accent"> the person </span
-                    ><span class="label"> to go to...</span>
-                  </div>
-                  <div class="p">
-                    I went to see him to get treatment for all sorts of pain.
-                    Wrist pain, back injury... they all got better with his
-                    treatment.”
-                  </div>
-                  <div class="p">Kayo B.</div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-content">
-                  <div class="testimonial-label">
-                    <span class="label">"If you want to get well</span
-                    ><span class="label alt accent"> from the inside out</span
-                    ><span class="label">, this is the place...</span>
-                  </div>
-                  <div class="p">
-                    Dr Mu gives your body what it needs to heal itself mentally
-                    and physically.”
-                  </div>
-                  <div class="p">Sadie P.</div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-content">
-                  <div class="testimonial-label">
-                    <span class="label">"</span
-                    ><span class="label alt accent">20 stars</span
-                    ><span class="label"> if I could...</span>
-                  </div>
-                  <div class="p">
-                    I was a hot mess when I entered the clinic. Dr Mu listened
-                    and addressed ALL my concerns. Got good price on much needed
-                    herbs. I feel so much better.”
-                  </div>
-                  <div class="p">Rita H.</div>
-                </div>
-              </div>
+              <card-testimonial data-title-fragments="3"
+                ><span slot="title-fragment1">"Dr. Mu is an</span
+                ><span slot="title-fragment2" class="label alt accent">
+                  exceptional </span
+                ><span slot="title-fragment3"> practitioner...</span
+                ><span slot="paragraph"
+                  >Initially he helped me rid 15 years of debilitating
+                  migraines. I now have over a decade with zero
+                  migraines.”</span
+                ><span slot="name">Kim W.</span></card-testimonial
+              >
+              <card-testimonial data-title-fragments="3"
+                ><span slot="title-fragment1">"I had a</span
+                ><span slot="title-fragment2" class="label alt accent">
+                  great </span
+                ><span slot="title-fragment3"> experience...</span
+                ><span slot="paragraph"
+                  >He did a remarkable job helping me with my problems with my
+                  cycle... I always recommend him to family and
+                  friends&#8212;he’s just the best!”</span
+                ><span slot="name">Megan S.</span></card-testimonial
+              >
+              <card-testimonial data-title-fragments="3"
+                ><span slot="title-fragment1">"He is</span
+                ><span slot="title-fragment2" class="label alt accent">
+                  the person </span
+                ><span slot="title-fragment3"> to go to...</span
+                ><span slot="paragraph"
+                  >I went to see him to get treatment for all sorts of pain.
+                  Wrist pain, back injury... They all got better with his
+                  treatment.”</span
+                ><span slot="name">Kayo B.</span></card-testimonial
+              >
+              <card-testimonial data-title-fragments="3"
+                ><span slot="title-fragment1">"If you want to get well</span
+                ><span slot="title-fragment2" class="label alt accent">
+                  from the inside out</span
+                ><span slot="title-fragment3">, this is the place...</span
+                ><span slot="paragraph"
+                  >Dr Mu gives your body what it needs to heal itself mentally
+                  and physically.”</span
+                ><span slot="name">Sadie P.</span></card-testimonial
+              >
+              <card-testimonial data-title-fragments="3"
+                ><span slot="title-fragment1">"</span
+                ><span slot="title-fragment2" class="label alt accent"
+                  >20 stars </span
+                ><span slot="title-fragment3">if I could...</span
+                ><span slot="paragraph"
+                  >I was a hot mess when I entered the clinic. Dr Mu listened
+                  and addressed ALL my concerns. Got good price on much needed
+                  herbs. I feel so much better.”</span
+                ><span slot="name">Sadie P.</span></card-testimonial
+              >
             </div>
           </div>
         </div>
@@ -471,7 +449,7 @@
       src="https://kit.fontawesome.com/f5b3bda298.js"
       crossorigin="anonymous"
     ></script>
-    <script src="js/components/CardTreatment.js" async></script>
+
     <script src="js/index.js" async></script>
   </body>
 </html>

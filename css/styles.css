@@ -195,8 +195,8 @@ button.primary {
   transition: transform 350ms ease-out;
 }
 button.primary:active {
-    transform: translateY(8px);
-  }
+  transform: translateY(8px);
+}
 button.secondary {
   background-color: transparent;
   transition: color 350ms ease-out;
@@ -204,8 +204,6 @@ button.secondary {
 button.secondary .arrow-right {
   transition: transform 350ms ease-out;
 }
-
-
 
 @keyframes gradient-animation {
   0% {
@@ -363,11 +361,11 @@ footer .logo {
   justify-content: space-between;
 }
 .secondary-nav .element-block {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
 }
 .secondary-nav .menu-item,
 .secondary-nav a {
@@ -375,11 +373,11 @@ footer .logo {
   text-decoration: none;
 }
 .secondary-nav .menu-item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 .primary-nav {
   position: fixed;
@@ -587,10 +585,10 @@ ul.nav-drawer-inner {
   width: var(--container-margin-y);
 }
 .card-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .card-content .image-frame {
   width: 100%;
   border-radius: 16px;
@@ -708,5 +706,3 @@ ul.nav-drawer-inner {
 }
 
 /* end media query */
-
-
