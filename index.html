@@ -21,22 +21,22 @@
     <header>
       <div class="secondary-nav">
         <div class="secondary-nav-inner fade-in">
-          <div class="horizontal-container-center">
+          <div class="element-block">
             <a
               href="https://maps.app.goo.gl/SJuPAQXwfW3CB9Ys6"
               class="menu-item hover"
               id="menu-item-location"
             >
               <span class="material-symbols-rounded"> location_on </span>
-              <div class="ml-sm">300 Beardsley Ln, Austin, TX 78746</div>
+              <div class="text-area">300 Beardsley Ln, Austin, TX 78746</div>
             </a>
             <a
-              class="menu-item ml-md hover"
+              class="menu-item hover"
               id="menu-item-phone"
               href="tel:+5123630676"
             >
               <span class="material-symbols-rounded"> call </span>
-              <div class="ml-sm">512-363-0676</div>
+              <div class="text-area">512-363-0676</div>
             </a>
           </div>
           <div class="menu-item" id="menu-item-rating">
@@ -47,7 +47,7 @@
               <span class="material-symbols-rounded"> star </span>
               <span class="material-symbols-rounded"> star </span>
             </div>
-            <div class="ml-sm">
+            <div class="text-area">
               on
               <a
                 href="https://search.google.com/local/writereview?placeid=ChIJc0Fdt5dKW4YRirflyye5Wfk"
@@ -135,12 +135,18 @@
               >
                 <div class="menu-label">About</div>
               </a>
-
               <div id="menu-button">
+                <span id="open-menu-icon">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+              </div>
+              <!-- <div id="menu-button">
                 <span id="open-menu-icon" class="material-symbols-rounded">
                   menu
                 </span>
-              </div>
+              </div> -->
             </div>
           </div>
 
@@ -244,126 +250,42 @@
       <div class="section-divider" id="treatments-section">
         <div class="section">
           <div class="grid">
-            <a href = "html/acupuncture.html">
-              <div class="card-content">
-                <div class="image-frame">
-                  <img
-                    loading="lazy"
-                    class="fade-in"
-                    src="images/close-up.jpg"
-                  />
-                </div>
-                <div class="text-area">
-                  <div class="label">Acupuncture</div>
-                  <button class="secondary">
-                    <div>Learn more</div>
-                    <span class="material-symbols-rounded arrow-right">
-                      arrow_right_alt
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </a>
-            <a href = "html/cupping.html">
-              <div class="card-content">
-                <div class="image-frame">
-                  <img
-                    loading="lazy"
-                    class="fade-in"
-                    src="images/client-with-suction-cup-process 10.36.37 AM.jpg"
-                  />
-                </div>
-                <div class="text-area">
-                  <div class="label">Cupping</div>
-                  <button class="secondary">
-                    <div>Learn more</div>
-                    <span class="material-symbols-rounded arrow-right">
-                      arrow_right_alt
-                    </span>
-                  </button>
-                </div>
-              </div></a
-            >
-            <a href = "html/chinese-herbs.html">
-              <div class="card-content">
-                <div class="image-frame">
-                  <img
-                    loading="lazy"
-                    class="fade-in"
-                    src="images/pexels-chinese-medicine-podcast-podcast-1290426-3280261.jpg"
-                  />
-                </div>
-                <div class="text-area">
-                  <div class="label">Chinese herbs</div>
-                  <button class="secondary">
-                    <div>Learn more</div>
-                    <span class="material-symbols-rounded arrow-right">
-                      arrow_right_alt
-                    </span>
-                  </button>
-                </div>
-              </div></a
-            >
-            <a href = "html/electroacupuncture.html">
-              <div class="card-content">
-                <div class="image-frame">
-                  <img
-                    loading="lazy"
-                    class="fade-in"
-                    src="images/electro-acupuncture-chinese-acupuncture-electric-acupuncture-patients-body-treat-pain.jpg"
-                  />
-                </div>
-                <div class="text-area">
-                  <div class="label">Electroacupuncture</div>
-                  <button class="secondary">
-                    <div>Learn more</div>
-                    <span class="material-symbols-rounded arrow-right">
-                      arrow_right_alt
-                    </span>
-                  </button>
-                </div>
-              </div></a
-            >
-            <a href = "html/moxibustion.html">
-              <div class="card-content">
-                <div class="image-frame">
-                  <img
-                    loading="lazy"
-                    class="fade-in"
-                    src="images/pexels-thirdman-6193360.jpg"
-                  />
-                </div>
-                <div class="text-area">
-                  <div class="label">Moxibustion</div>
-                  <button class="secondary">
-                    <div>Learn more</div>
-                    <span class="material-symbols-rounded arrow-right">
-                      arrow_right_alt
-                    </span>
-                  </button>
-                </div>
-              </div></a
-            >
-            <a href = "html/massage.html">
-              <div class="card-content">
-                <div class="image-frame">
-                  <img
-                    loading="lazy"
-                    class="fade-in"
-                    src="images/massage-concept-with-womans-back.jpg"
-                  />
-                </div>
-                <div class="text-area">
-                  <div class="label">Massage</div>
-                  <button class="secondary">
-                    <div>Learn more</div>
-                    <span class="material-symbols-rounded arrow-right">
-                      arrow_right_alt
-                    </span>
-                  </button>
-                </div>
-              </div></a
-            >
+            <card-treatment
+              data-image-src="images/acupuncture.jpg"
+              data-page-link="html/acupuncture.html"
+              class="fade-in"
+              ><span slot="treatment-type">Acupuncture</span>
+            </card-treatment>
+            <card-treatment
+              data-image-src="images/cupping.jpg"
+              data-page-link="html/cupping.html"
+              class="fade-in"
+              ><span slot="treatment-type">Cupping</span>
+            </card-treatment>
+            <card-treatment
+              data-image-src="images/chinese-herbs.jpg"
+              data-page-link="html/chinese-herbs.html"
+              class="fade-in"
+              ><span slot="treatment-type">Chinese herbs</span>
+            </card-treatment>
+            <card-treatment
+              data-image-src="images/electroacupuncture.jpg"
+              data-page-link="html/electroacupuncture.html"
+              class="fade-in"
+              ><span slot="treatment-type">Electroacupuncture</span>
+            </card-treatment>
+            <card-treatment
+              data-image-src="images/moxibustion.jpg"
+              data-page-link="html/moxibustion.html"
+              class="fade-in"
+              ><span slot="treatment-type">Moxibustion</span>
+            </card-treatment>
+            <card-treatment
+              data-image-src="images/massage.jpg"
+              data-page-link="html/massage.html"
+              class="fade-in"
+              ><span slot="treatment-type">Massage</span>
+            </card-treatment>
           </div>
         </div>
       </div>
@@ -377,12 +299,19 @@
                   Dr. Mu is a licensed acupuncturist with an M.D. and over 20
                   years of experience.
                 </div>
-                <a href = "html/about.html">
-                <button class="secondary"><div>Read more</div><span class = "material-symbols-rounded arrow-right">arrow_right_alt</span></button></a>
+                <a href="html/about.html">
+                  <button class="secondary">
+                    <div>Read more</div>
+                    <span class="material-symbols-rounded arrow-right"
+                      >arrow_right_alt</span
+                    >
+                  </button></a
+                >
               </div>
             </div>
-            <div class = "image-frame">
-            <img loading="lazy" class="fade-in" src="images/162A1086.png"/></div>
+            <div class="image-frame fade-in">
+              <img loading="lazy" class="fade-in" src="images/dr-mu.png" />
+            </div>
           </div>
         </div>
       </div>
@@ -482,12 +411,23 @@
             </iframe>
             <div class="text-area">
               <div class="subheading">Contact</div>
-              <div class="p">
-                300 Beardsley Ln, Austin, TX 78746<br /><b>Phone:</b>
-                512-363-0676<br /><b>Mail:</b>
-                contact@acupuncturewestlake.com
+              <div>
+                <a href="https://maps.app.goo.gl/SJuPAQXwfW3CB9Ys6">
+                  <span class="material-symbols-rounded"> location_on </span>
+                  <div class="p underline">
+                    300 Beardsley Ln, Austin, TX 78746
+                  </div>
+                </a>
+                <a href="tel:+15123630676">
+                  <span class="material-symbols-rounded"> call </span>
+                  <div class="p underline">512-363-0676</div>
+                </a>
+                <a href="mailto:contact@acupuncturewestlake.com">
+                  <span class="material-symbols-rounded"> mail </span>
+                  <div class="p underline">contact@acupuncturewestlake.com</div>
+                </a>
               </div>
-              <div class="p"><b>Hours:</b> Everyday, 9 AM - 6 PM</div>
+              <div class="p"><b>Hours:</b> every day, 9 AM - 6 PM</div>
             </div>
           </div>
         </div>
@@ -522,8 +462,8 @@
           <a class="hover" href="html/contact.html"><li>Contact</li></a>
         </ul>
         <div class="caption">
-          &copy<span class="year"> 2024 </span>Mu Acupuncture & Wellness Clinic.
-          All rights reserved.
+          <span>&copy </span><span id="year">2024</span
+          ><span> Mu Acupuncture & Wellness Clinic. All rights reserved.</span>
         </div>
       </div>
     </footer>
@@ -531,6 +471,7 @@
       src="https://kit.fontawesome.com/f5b3bda298.js"
       crossorigin="anonymous"
     ></script>
-    <script src="js/main.js" async></script>
+    <script src="js/components/CardTreatment.js" async></script>
+    <script src="js/index.js" async></script>
   </body>
 </html>

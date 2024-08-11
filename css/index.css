@@ -1,3 +1,4 @@
+
 @media screen and (max-width: 660px) {
   #hero-section .content {
     margin: 5vh;
@@ -39,7 +40,7 @@
       rgba(0, 0, 0, 0.25),
       rgba(0, 0, 0, 0.25)
     ),
-    url(../images/close-up-hand-holding-acupuncture-needle.jpg);
+    url(../images/hero.jpg);
   background-size: cover;
   background-position: center center;
   border-radius: 16px;
@@ -82,6 +83,113 @@
 #about-section button.secondary:hover .arrow-right {
   transform: translateX(8px);
 }
-#about-section button:hover {
-  color: var(--hover);
-}
+
+#testimonials-section .card-content {
+    width: 100%;
+    gap: 16px;
+  }
+  
+
+  #about-section .element-block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  #about-section .image-frame {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    filter: var(--drop-shadow);
+  }
+  
+  #about-section .grid,
+  #contact-section .grid {
+    column-gap: 100px;
+  }
+  
+  #treatments-section .grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  }
+  
+  #about-section img {
+    aspect-ratio: 3/4;
+    width: 100%;
+    vertical-align: middle;
+    object-fit: cover;
+  }
+  
+  #contact-section iframe {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+  
+  #contact-section iframe {
+    width: 100%;
+    filter: var(--drop-shadow);
+  }
+  #contact-section a {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+  
+  #treatments-section .section {
+    padding: 0 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  #testimonials-section .section {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  
+  #testimonials-section .section,
+  #treatments-section .section {
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-right: 0;
+    margin-left: 0;
+    max-width: 100%;
+  }
+  #treatments-section.section-divider {
+    background-color: var(--neutral);
+  }
+  
+  #testimonials-section.section-divider {
+    background-color: var(--highlight);
+  }
+  .scroller {
+    width: 100%;
+  }
+  
+  .scroller-inner {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 40px;
+  }
+  
+  .scroller[data-animated="true"] {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(
+      90deg,
+      transparent,
+      white 20%,
+      white 80%,
+      transparent
+    );
+    mask: linear-gradient(90deg, transparent, white 20s, white 80%, transparent);
+    padding: 40px 0;
+    box-sizing: border-box;
+  }
+  .scroller[data-animated="true"] .scroller-inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll 20s forwards linear infinite;
+  }
+  
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50%));
+    }
+  }
+  
