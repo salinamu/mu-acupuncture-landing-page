@@ -11,7 +11,6 @@ const primaryNavbarCollapsibles =
   primaryNavbar.querySelectorAll(".collapsible");
 const navDrawerCollapsibles = navDrawer.querySelectorAll(".collapsible");
 const onClickCollapsibles = document.querySelectorAll(".collapsible.on-click");
-const footerYear = document.querySelector("#year");
 let prefersReducedMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)"
 ).matches;
@@ -30,7 +29,6 @@ let callback = (entries, observer) => {
 };
 let observer = new IntersectionObserver(callback, options);
 const fadeInItems = Array.from(document.querySelectorAll(".fade-in"));
-let date = new Date();
 
 window.onload = (event) => {
   main();
@@ -38,9 +36,8 @@ window.onload = (event) => {
 
 function main() {
   handlePrimaryNavbarCollapsibles();
-  handleOnClickCollapsibles();
   handleToggleNavDrawer();
-  footerYear.innerHTML = date.getFullYear();
+  handleOnClickCollapsibles();
   openMenuIcon.addEventListener("click", function () {
     navDrawer.classList.toggle("open");
     closeNavDrawerCollapsibles();

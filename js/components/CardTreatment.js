@@ -12,6 +12,8 @@ class CardTreatment extends HTMLElement {
         <link rel = "stylesheet" href = "css/styles.css">
 
     <link rel = "stylesheet" href = "css/CardTreatment.css">
+    <link rel = "stylesheet" href = "css/SecondaryButton.css">
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
@@ -26,12 +28,19 @@ class CardTreatment extends HTMLElement {
                       <div class="label">
                         <slot name="treatment-type">Treatment-type</slot>
                       </div>
-                      <button class="secondary">
-                        <div>Learn more</div>
-                        <span class="material-symbols-rounded arrow-right">
-                          arrow_right_alt
-                        </span>
-                      </button>
+                      <secondary-button
+                data-icon = 'none'
+                  data-page-link="${pageLink}"
+                  data-color-mode="light"
+                >
+                 <span slot="text">Learn more</span
+                  ><span
+                    slot="arrow"
+                    class="material-symbols-rounded arrow-right"
+                  >
+                    arrow_right_alt
+                  </span></secondary-button
+                >
                     </div>
                   </div>
                 </a>

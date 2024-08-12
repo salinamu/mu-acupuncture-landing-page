@@ -1,0 +1,33 @@
+button {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    width: max-content;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: var(--body1);
+    font-weight: var(--light);
+    font-family: var(--primary-font);
+    border: none;
+    gap: 8px;
+    background-color: transparent;
+    transition: color 350ms ease-out;
+  }
+  button.dark {
+    color: var(--white);
+  }
+  button.light {
+    color: var(--text);
+  }
+  #divider {
+    width: 1px;
+    height: calc(var(--body1)*2);
+  }
+ button.dark #divider {
+    background-color: var(--white);
+ }
+ button.light #divider{
+    background-color: var(--text);
+ }

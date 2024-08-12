@@ -67,13 +67,7 @@
   align-items: center;
   gap: var(--container-margin-x);
 }
-#hero-section button {
-  color: var(--white);
-}
-#hero-section button.secondary:hover .arrow-right,
-#about-section button.secondary:hover .arrow-right {
-  transform: translateX(8px);
-}
+
 #about-section .element-block {
   display: flex;
   flex-direction: column;
@@ -176,3 +170,10 @@
     transform: translate(calc(-50%));
   }
 }
+
+#about-section secondary-button .arrow-right, #hero-section secondary-button .arrow-right {
+    transition: transform 350ms ease-out;
+  }
+  #about-section secondary-button:hover .arrow-right, #hero-section secondary-button:hover .arrow-right {
+    transform: translateX(8px);
+  }

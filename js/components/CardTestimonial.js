@@ -12,6 +12,8 @@ class CardTestimonial extends HTMLElement {
         this.shadowRoot.innerHTML = `
         <link rel = "stylesheet" href = "css/styles.css">
         <link rel = "stylesheet" href = "css/CardTestimonial.css">
+        <script src="js/components/SecondaryButton.js" async></script>
+
               <div class="card">
                 <div class="card-content">
                   <div class="testimonial-label">`+ title + `</div>

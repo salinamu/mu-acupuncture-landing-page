@@ -17,6 +17,10 @@
     <link rel="stylesheet" href="css/index.css" />
     <script src="js/components/CardTreatment.js" async></script>
     <script src="js/components/CardTestimonial.js" async></script>
+    <script src="js/components/CustomFooter.js" async></script>
+    <script src="js/components/PrimaryButton.js" async></script>
+    <script src="js/components/SecondaryButton.js" async></script>
+
     <title>Document</title>
   </head>
   <body>
@@ -221,22 +225,22 @@
               ><span class="heading"> happens</span>
             </div>
             <div class="buttons">
-              <button
-                class="primary"
-                onclick="setTimeout(function() {document.location.href='html/contact.html'}, 350)"
+              <primary-button data-page-link="html/contact.html"
+                ><span slot="text">Book a visit</span></primary-button
               >
-                <div>Book a visit</div>
-              </button>
-              <a
-                href="https://search.google.com/local/writereview?placeid=ChIJc0Fdt5dKW4YRirflyye5Wfk"
-                ><button class="secondary">
-                  <i class="fa-brands fa-google"></i>
-                  <div>|</div>
-                  <div>Review us</div>
-                  <span class="material-symbols-rounded arrow-right">
-                    arrow_right_alt
-                  </span>
-                </button></a
+              <secondary-button
+              data-icon = 'true'
+                data-page-link="https://search.google.com/local/writereview?placeid=ChIJc0Fdt5dKW4YRirflyye5Wfk"
+                data-color-mode="dark"
+              >
+                <i slot="icon" class="fa-brands fa-google"></i
+                ><span slot="text">Review us</span
+                ><span
+                  slot="arrow"
+                  class="material-symbols-rounded arrow-right"
+                >
+                  arrow_right_alt
+                </span></secondary-button
               >
             </div>
           </div>
@@ -296,13 +300,18 @@
                   Dr. Mu is a licensed acupuncturist with an M.D. and over 20
                   years of experience.
                 </div>
-                <a href="html/about.html">
-                  <button class="secondary">
-                    <div>Read more</div>
-                    <span class="material-symbols-rounded arrow-right"
-                      >arrow_right_alt</span
-                    >
-                  </button></a
+                <secondary-button
+                data-icon = 'none'
+                  data-page-link="html/about.html"
+                  data-color-mode="light"
+                >
+                 <span slot="text">Read more</span
+                  ><span
+                    slot="arrow"
+                    class="material-symbols-rounded arrow-right"
+                  >
+                    arrow_right_alt
+                  </span></secondary-button
                 >
               </div>
             </div>
@@ -417,34 +426,14 @@
             ><span class="subheading alt accent">wellness journey </span>
             <span class="subheading accent">today</span>
           </div>
-          <button
-            class="primary"
-            onclick="setTimeout(function() {document.location.href='html/contact.html'}, 350)"
+          <primary-button data-page-link="html/contact.html"
+            ><span slot="text">Book a visit</span></primary-button
           >
-            <div>Book a visit</div>
-          </button>
         </div>
       </div>
     </div>
 
-    <footer>
-      <div class="footer-inner">
-        <ul>
-          <img class="logo" src="images/mu-acupuncture-primary-logo.svg" />
-
-          <a class="hover" href="html/new-patients.html"
-            ><li>New Patients</li></a
-          >
-          <a class="hover" href="html/about.html"><li>About</li></a>
-          <a class="hover" href="html/treatments.html"><li>Treatments</li></a>
-          <a class="hover" href="html/contact.html"><li>Contact</li></a>
-        </ul>
-        <div class="caption">
-          <span>&copy </span><span id="year">2024</span
-          ><span> Mu Acupuncture & Wellness Clinic. All rights reserved.</span>
-        </div>
-      </div>
-    </footer>
+    <custom-footer> </custom-footer>
     <script
       src="https://kit.fontawesome.com/f5b3bda298.js"
       crossorigin="anonymous"

@@ -1,0 +1,44 @@
+button {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    width: max-content;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: var(--body1);
+    font-weight: var(--light);
+    font-family: var(--primary-font);
+    border: none;
+    gap: 8px;
+    color: var(--white);
+  }
+  button.primary {
+    border-radius: 1000px;
+    padding: var(--body1);
+    background: linear-gradient(
+      -45deg,
+      var(--secondary),
+      var(--neutral) 45%,
+      var(--secondary) 55%
+    );
+    background-size: 600%;
+    animation: gradient-animation 3s linear infinite;
+    transition: transform 350ms ease-out;
+  }
+  button.primary:active {
+    transform: translateY(8px);
+  }
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
