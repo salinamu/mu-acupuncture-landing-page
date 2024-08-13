@@ -5,6 +5,7 @@ class SecondaryButton extends HTMLElement {
         this.attachShadow({mode:'open'});
     }
     connectedCallback(){
+        const cssPathPrefix = this.dataset.cssPathPrefix || 'css/';
         const pageLink = this.dataset.pageLink || 'index.html';
         const icon = this.dataset.icon || 'none';
         const direction = this.dataset.direction || 'right';
@@ -14,8 +15,8 @@ class SecondaryButton extends HTMLElement {
             iconHTML = '<span><slot name = "icon"></slot></span><span id = "divider"></span>';
         }
         const commonHTML = `
-                <link rel = "stylesheet" href = "css/styles.css">
-                <link rel = "stylesheet" href = "css/SecondaryButton.css">
+                <link rel = "stylesheet" href = "${cssPathPrefix}styles.css">
+                <link rel = "stylesheet" href = "${cssPathPrefix}SecondaryButton.css">
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>`;
 
         if (direction==='right')

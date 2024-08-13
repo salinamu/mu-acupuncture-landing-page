@@ -5,10 +5,11 @@ class PrimaryButton extends HTMLElement {
         this.attachShadow({mode:'open'});
     }
     connectedCallback(){
+        const cssPathPrefix = this.dataset.cssPathPrefix || 'css/';
         const pageLink = this.dataset.pageLink || 'index.html';
         this.shadowRoot.innerHTML = `
-        <link rel = "stylesheet" href = "css/styles.css">
-        <link rel = "stylesheet" href = "css/PrimaryButton.css">
+        <link rel = "stylesheet" href = "${cssPathPrefix}styles.css">
+        <link rel = "stylesheet" href = "${cssPathPrefix}PrimaryButton.css">
         <button
                 class="primary"
                 onclick="setTimeout(function() {document.location.href='${pageLink}'}, 350)"

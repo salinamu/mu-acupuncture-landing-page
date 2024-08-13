@@ -31,6 +31,8 @@
   --regular: 400;
   --medium: 500;
   --semibold: 600;
+  --subheading-text-gap: 32px;
+  --max-width: 1200px;
 
   --primary-font: "Geologica", sans-serif;
   --secondary-font: "Arapey", serif;
@@ -69,11 +71,11 @@ body.noscroll {
 
 .grid {
   width: 100%;
-  max-width: 1080px;
+  max-width: var(--max-width);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   align-items: center;
-  gap: 40px;
+  gap: var(--container-margin-y);
   justify-content: center;
 }
 
@@ -213,7 +215,7 @@ a .stay-hovered {
 .section {
   display: flex;
   width: 100%;
-  max-width: 1080px;
+  max-width: var(--max-width);
   justify-content: center;
   align-items: center;
   margin: var(--container-margin-y) var(--container-margin-x);
@@ -221,7 +223,7 @@ a .stay-hovered {
 .section .text-area {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: var(--subheading-text-gap);
   width: 100%;
 }
 

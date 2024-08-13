@@ -1,0 +1,96 @@
+#question {
+    position: relative;
+    overflow: hidden;
+}
+#question:hover .hover-effect-rectangle {
+    transform: translateY(-50%);
+}
+.hover-effect-rectangle {
+    position: absolute;
+    z-index: 0;
+    transform: translateY(0%);
+    height: 200%;
+    width: 100%;
+    background-color: var(--highlight);
+    transition: transform 350ms ease-out;
+}
+#question-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px 0;
+    gap: 16px;
+}
+#answer {    
+    margin: 16px 0;
+}
+
+#expand-button {
+    flex:none;
+  width: 32px;
+  height: 32px;
+  border: solid;
+  border-radius: 8px;
+  border-color: var(--text);
+  border-width: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: border-color 350ms ease-out;
+
+}
+#expand-icon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+}
+#expand-icon .line {
+  transform-origin: center;
+  transform: translate(0, 0);
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: var(--text);
+  transition: transform 350ms ease-out, background-color 350ms ease-out;
+  border-radius: 1000px;
+}
+
+#expand-icon :nth-child(2) {
+  transform: rotate(90deg);
+}
+
+#question:hover #expand-button {
+    border-color: var(--accent);
+}
+#question:hover #expand-icon .line {
+    background-color: var(--accent);
+}
+.collapsible {
+    border-bottom: solid;
+    border-color: var(--text);
+    border-width: 2px;
+    }
+.collapsible-content{
+    max-height: 0;
+    overflow: hidden;
+    transform: scale(0.9);
+    opacity: 0%;
+    transition: transform 350ms ease-out, opacity 350ms ease-out, max-height 350ms ease-out;
+}
+.collapsible.open .collapsible-content {
+    max-height: 300px;
+    transform: scale(1);
+    opacity: 100%;
+
+}
+.collapsible.open #expand-icon :nth-child(2) {
+    transform: rotate(0deg);
+}
