@@ -23,22 +23,217 @@
   text-align: center;
 }
 #hero-section {
+  position: relative;
   width: 100%;
   height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--neutral);
+  overflow: hidden;
 }
 #hero-section-inner {
   margin: 0 var(--container-margin-x);
 }
 #hero-section .text-area {
+  position: relative;
   display: flex;
   flex-direction: column;
   max-width: 100%;
   gap: var(--subheading-text-gap);
+  z-index: 1;
 }
-#hero-section .container {
+
+#main-content {
+  position: relative;
+  z-index: 1;
+}
+#parallax-container {
+  position: fixed;
   width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#hero-section img {
+  position: absolute;
+}/*hero assets start*/
+#ginger3 {
+  min-width: 80px;
+  width: 12vw;
+  max-width: 160px;
+  animation: ginger3 9s ease-out 0s 1 normal both;
+}
+@keyframes ginger3 {
+  from {
+    transform: translate(-40vw, -30vh) rotate(-90deg);
+  }
+  to {
+    transform: translate(-40vw, -20vh) rotate(0deg);
+  }
+}
+
+#jujube2 {
+  min-width: 120px;
+  width: 14vw;
+  max-width: 260px;
+  animation: jujube2 9s ease-out 0s 1 normal both;
+}
+@keyframes jujube2 {
+  from {
+    transform: translate(-40vw, 10vh) rotate(-90deg);
+  }
+  to {
+    transform: translate(-40vw, 20vh) rotate(0deg);
+  }
+}
+
+/*left edge ends*/
+
+#ginseng2 {
+  min-width: 20px;
+  width: 8vw;
+  max-width: 60px;
+  animation: ginseng2 9s ease-out 0s 1 normal both;
+}
+@keyframes ginseng2 {
+  from {
+    transform: translate(-25vw, -20vh) rotate(-90deg);
+  }
+  to {
+    transform: translate(-25vw, -10vh) rotate(0deg);
+  }
+}
+
+#jujube1 {
+  min-width: 140px;
+  width: 18vw;
+  max-width: 260px;
+  animation: jujube1 9s ease-out 0s 1 normal both;
+}
+@keyframes jujube1 {
+  from {
+    transform: translate(-10vw, -35vh) rotate(-90deg);
+  }
+  to {
+    transform: translate(-10vw, -25vh) rotate(0deg);
+  }
+}
+
+#jujube4 {
+  min-width: 140px;
+  width: 18vw;
+  max-width: 260px;
+  animation: jujube4 9s ease-out 0s 1 normal both;
+}
+@keyframes jujube4 {
+  from {
+    transform: translate(-15vw, 15vh) rotate(-90deg);
+  }
+  to {
+    transform: translate(-15vw, 25vh) rotate(0deg);
+  }
+}
+
+/*left side ends*/
+
+#ginger2 {
+  min-width: 80px;
+  width: 12vw;
+  max-width: 160px;
+  transform-origin: center;
+  animation: ginger2 9s ease-out 0s 1 normal both;
+}
+@keyframes ginger2 {
+  from {
+    transform: translate(40vw, -30vh) rotate(-180deg);
+  }
+  to {
+    transform: translate(40vw, -20vh) rotate(-120deg);
+  }
+}
+
+#jujube3 {
+  min-width: 140px;
+  width: 18vw;
+  max-width: 260px;
+  animation: jujube3 9s ease-out 0s 1 normal both;
+}
+@keyframes jujube3 {
+  from {
+    transform: translate(38vw, 10vh) rotate(-90deg);
+  }
+  to {
+    transform: translate(38vw, 20vh) rotate(0deg);
+  }
+}
+
+/*right edge ends*/
+
+#ginseng4 {
+  min-width: 40px;
+  width: 10vw;
+  max-width: 80px;
+  animation: ginseng4 9s ease-out 0s 1 normal both;
+}
+@keyframes ginseng4 {
+  from {
+    transform: translate(25vw, -35vh) rotate(-90deg);
+  }
+  to {
+    transform: translate(25vw, -25vh) rotate(0deg);
+  }
+}
+
+#ginseng3 {
+  min-width: 40px;
+  width: 10vw;
+  max-width: 80px;
+  animation: ginseng3 9s ease-out 0s 1 normal both;
+}
+@keyframes ginseng3 {
+  from {
+    transform: translate(10vw, -35vh) rotate(-90deg);
+  }
+  to {
+    transform: translate(10vw, -25vh) rotate(0deg);
+  }
+}
+
+#ginger1 {
+  min-width: 80px;
+  width: 12vw;
+  max-width: 160px;
+  transform-origin: center;
+  animation: ginger1 9s ease-out 0s 1 normal both;
+}
+@keyframes ginger1 {
+  from {
+    transform: translate(25vw, -10vh) rotate(-90deg);
+  }
+  to {
+    transform: translate(25vw, 0vh) rotate(-45deg);
+  }
+}
+
+#ginseng1 {
+  min-width: 40px;
+  width: 10vw;
+  max-width: 80px;
+  animation: ginseng1 9s ease-out 0s 1 normal both;
+}
+@keyframes ginseng1 {
+  from {
+    transform: translate(10vw, 15vh) rotate(-90deg);
+  }
+  to {
+    transform: translate(10vw, 25vh) rotate(0deg);
+  }
+}
+
+/*right side ends*/
+custom-footer {
+  position: relative;
+  z-index: 0;
 }
