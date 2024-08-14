@@ -1,31 +1,15 @@
-@media screen and (max-width: 660px) {
-  #hero-section .content {
-    margin: 5vh;
 
-    gap: 4vh;
-  }
+#hero-section .content {
+    margin: var(--container-margin-y) var(--container-margin-x);
 }
-@media screen and (min-width: 660px) and (max-width: 1045px) {
-  #hero-section .content {
-    margin: 7.5vh;
-
-    gap: 6vh;
-  }
-}
-
-@media screen and (min-width: 1045px) {
-  #hero-section .content {
-    margin: 10vh;
-    gap: 8vh;
-  }
-}
+  
 #hero-section .content {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 #hero-section .text-area {
-  width: 50%;
+  width: 60%;
 }
 .container#hero-section {
   padding: var(--header-height) 0px 0px;
@@ -51,7 +35,7 @@
 #hero-section .element-block {
   display: flex;
   flex-direction: column;
-  gap: 5vh;
+  gap: calc(var(--subheading-text-gap)*2);
 }
 #hero-section .heading {
   color: var(--white);
@@ -190,4 +174,8 @@
 #about-section secondary-button:hover .arrow-right,
 #hero-section secondary-button:hover .arrow-right {
   transform: translateX(8px);
+}
+
+#treatments-section .grid {
+    max-width: var(--max-width);
 }

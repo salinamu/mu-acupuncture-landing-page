@@ -22,25 +22,28 @@ class SecondaryButton extends HTMLElement {
         if (direction==='right')
             {
                 this.shadowRoot.innerHTML = `${commonHTML}
-                <a href="${pageLink}"
-                        ><button class="secondary ${colorMode}">${iconHTML}
-                          <div><slot name = "text">Text</slot></div>
-                          <span><slot name = "arrow"></slot>
+                <a href="${pageLink}">
+                    <button class="secondary ${colorMode}">${iconHTML}
+                    <div>
+                        <slot name = "text">Text
+                        </slot>
+                    </div>
+                          <span>
+                            <slot name = "arrow"></slot>
                           </span>
-                        </button></a>
+                    </button>
+                </a>
                 `;
             }
             else 
                 {
-                    this.shadowRoot.innerHTML += `
-                    <a
-                            href="${pageLink}"
-                            ><button class="secondary ${colorMode}"><span><slot name = "icon"></slot></span><span id = "divider"></span>
-                            <span><slot name = "icon"></slot></span>
-                              <div><slot class = "text">Text</slot></div>
+                    this.shadowRoot.innerHTML = `${commonHTML}
+                    <a href="${pageLink}"
+                            ><button class="secondary ${colorMode}"><span><slot name = "arrow"></slot>
+                            </span>
+                              <div><slot name = "text">Text</slot></div>${iconHTML}
                               
-                            </button></a
-                          >
+                            </button></a>
                     `;
                 }
         

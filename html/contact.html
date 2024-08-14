@@ -1,12 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <div>contact</div>
-
-</body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Geologica:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
+    <script src="../js/components/PrimaryButton.js" async></script>
+    <script src="../js/components/SecondaryButton.js" async></script>
+    <script src="../js/components/CustomFooter.js" async></script>
+    <script src="../js/components/FAQItem.js" async></script>
+    <script src="../js/components/CustomHeader.js" async></script>
+  </head>
+  <body>
+    <custom-header
+      data-index-path-prefix="../"
+      data-css-path-prefix="../css/"
+      data-pages-path-prefix="./"
+      data-images-path-prefix="../images/"
+    ></custom-header>
+    <div id="hero-section">
+      <div id="hero-section-inner">
+        <div class="container">
+          <div class="text-area">
+            <div class="subheading alt">We look forward to seeing you</div>
+            <div class="p">
+              Call us to book a visit. We’re happy to answer any questions you
+              may have.
+            </div>
+          </div>
+          <div class="image-frame">
+            <img src="../images/hero-contact.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="main-content">
+      <div class="section-divider" id="contact-section">
+        <div class="section">
+          <div class="grid">
+            <iframe
+              class="fade-in"
+              style="border: 0"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDJUoHLpDA2pmDzieeCaUYEhi623kfM2NA
+                        &q=Mu+Acupuntcure,Austin+TX"
+            >
+            </iframe>
+            <div class="text-area">
+              <div class="subheading alt">Contact</div>
+              <div>
+                <a href="https://maps.app.goo.gl/SJuPAQXwfW3CB9Ys6">
+                  <span class="material-symbols-rounded"> location_on </span>
+                  <div class="p underline">
+                    300 Beardsley Ln, Austin, TX 78746
+                  </div>
+                </a>
+                <a href="tel:+15123630676">
+                  <span class="material-symbols-rounded"> call </span>
+                  <div class="p underline">512-363-0676</div>
+                </a>
+                <a href="mailto:contact@acupuncturewestlake.com">
+                  <span class="material-symbols-rounded"> mail </span>
+                  <div class="p underline">contact@acupuncturewestlake.com</div>
+                </a>
+              </div>
+              <div class="p"><b>Hours:</b> every day, 9 AM - 6 PM</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="banner" id="cta">
+        <div class="element-block">
+          <div class="text-area">
+            <span class="subheading accent">Start your </span
+            ><span class="subheading alt accent">wellness journey </span>
+            <span class="subheading accent">today</span>
+          </div>
+          <primary-button
+            data-css-path-prefix="../css/"
+            data-page-link="./contact.html"
+            ><span slot="text">Book a visit</span></primary-button
+          >
+        </div>
+      </div>
+    </div>
+    <custom-footer
+      data-index-path-prefix="../"
+      data-pages-path-prefix="./"
+      data-css-path-prefix="../css/"
+      data-images-path-prefix="../images/"
+    ></custom-footer>
+  </body>
+  <script src="../js/main.js" async></script>
 </html>

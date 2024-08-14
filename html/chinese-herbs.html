@@ -1,12 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <div>chinese-herbs</div>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Geologica:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../js/components/PrimaryButton.js" async></script>
+    <script src="../js/components/SecondaryButton.js" async></script>
+    <script src="../js/components/CustomFooter.js" async></script>
+    <script src="../js/components/FAQItem.js" async></script>
+    <script src="../js/components/CustomHeader.js" async></script>
+    <script src="../js/components/CardTreatment.js" async></script>
+    <script src="../js/components/BlogContent.js" async></script>
+  </head>
+  <body>
+    <blog-content data-page-title="chinese herbs" data-number-of-bullets="7">
+      <span slot="what">
+        Chinese herbs are a fundamental component of Traditional Chinese
+        Medicine (TCM), which has been practiced for thousands of years. These
+        herbs are derived from natural sources, including plants, minerals, and
+        sometimes animal products, and are used to restore balance within the
+        body, promote health, and treat various ailments. The philosophy behind
+        Chinese herbal medicine is rooted in the belief that each herb possesses
+        specific qualities that can influence the body's energy (Qi), balance
+        Yin and Yang, and harmonize the functions of the organs.
+      </span>
+      <span slot="how1">
+        Chinese herbs work by addressing the root cause of illness rather than
+        just alleviating symptoms. Each herb is carefully selected for its
+        unique properties and its ability to interact with other herbs in a
+        formula. A typical Chinese herbal formula may contain several different
+        herbs, each contributing to the overall therapeutic effect. These
+        formulas are customized to meet the specific needs of the individual,
+        taking into account their unique constitution, symptoms, and overall
+        health condition.
+      </span>
+      <span slot="how2">
+        In TCM, herbs are categorized according to their nature (hot, warm,
+        cool, cold), taste (bitter, sweet, sour, salty, pungent), and their
+        affinity to certain organs and meridians. By combining these factors,
+        practitioners create balanced formulas that can treat a wide range of
+        conditions, promote healing, and maintain health.
+      </span>
+      <span slot="treat">
+        Chinese herbs are used to treat a vast array of health conditions,
+        ranging from acute illnesses to chronic diseases. Some of the common
+        conditions treated with Chinese herbal medicine include:
+      </span>
+      <span slot="list-item1">Digestive disorders</span>
+      <span slot="list-item2">Respiratory issues</span>
+      <span slot="list-item3">Women's health</span>
+      <span slot="list-item4">Chronic pain</span>
+      <span slot="list-item5">Stress and anxiety</span>
+      <span slot="list-item6">Immune support</span>
+      <span slot="list-item7">Skin conditions</span>
+    </blog-content>
+  </body>
 
-</body>
+  <script src="../js/main.js" async></script>
 </html>

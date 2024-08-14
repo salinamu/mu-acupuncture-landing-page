@@ -1,0 +1,45 @@
+#treatments-section .grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+}
+
+#treatments-section .section {
+  padding: 0 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-right: 0;
+  margin-left: 0;
+  max-width: 100%;
+}
+#treatments-section .grid {
+    max-width: var(--max-width);
+}
+#treatments-section.section-divider {
+  background-color: var(--white);
+}
+#hero-section .text-area {
+    max-width: 20%;
+    text-align: center;
+}
+  #hero-section {
+    width: 100%;
+    height: 80vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--neutral);
+  }
+  #hero-section-inner {
+    margin: 0 var(--container-margin-x);
+  }
+  #hero-section .text-area {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    gap: var(--subheading-text-gap);
+  }
+  #hero-section .container {
+    width: 100%;
+    
+  }

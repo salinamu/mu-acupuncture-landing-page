@@ -21,8 +21,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 24px 0;
-    gap: 16px;
+    margin: 16px 0;
+    gap: calc(var(--container-margin-x) + 8px);
 }
 #answer {    
     margin: 16px 0;
@@ -62,7 +62,9 @@
   transition: transform 350ms ease-out, background-color 350ms ease-out;
   border-radius: 1000px;
 }
-
+.label {
+    transition: transform 350ms ease-out;
+}
 #expand-icon :nth-child(2) {
   transform: rotate(90deg);
 }
@@ -73,10 +75,13 @@
 #question:hover #expand-icon .line {
     background-color: var(--accent);
 }
+#question:hover .label {
+    transform: translateX(var(--container-margin-x));
+}
 .collapsible {
     border-bottom: solid;
-    border-color: var(--text);
-    border-width: 2px;
+    border-color: var(--stroke);
+    border-width: 1px;
     }
 .collapsible-content{
     max-height: 0;

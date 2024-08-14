@@ -1,0 +1,83 @@
+#hero-section {
+  width: 100%;
+  min-height: 80vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: var(--neutral);
+  padding-top: calc(
+    var(--header-height) + var(--container-margin-y) + var(--nav-logo-size) / 2
+  );
+}
+#hero-section-inner {
+  height: 100%;
+  margin: 0 var(--container-margin-x) var(--container-margin-x);
+}
+#hero-section .text-area {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: var(--subheading-text-gap);
+}
+#hero-section .container {
+  max-width: 328px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--container-margin-y);
+  justify-content: space-between;
+}
+
+#hero-section img {
+  max-width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 1000px;
+  filter: var(--drop-shadow);
+}
+#achievement-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--container-margin-y);
+}
+.achievement-card {
+  background-color: var(--highlight);
+  padding: 24px;
+  box-sizing: border-box;
+  border-radius: 16px;
+}
+.card-content {
+  text-align: left;
+}
+.card-content .label {
+  width: 100%;
+}
+.card-content ul {
+  width: 100%;
+}
+.card-content li {
+  width: calc(100% - 40px);
+}
+.grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+  align-items: flex-start;
+  column-gap: 100px;
+}
+
+.grid .text-area .element-block {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--title-text-gap) / 2);
+}
+
+@media screen and (max-width: 979px) {
+  .grid .text-area {
+    order: 1;
+  }
+  #achievement-cards {
+    order: 2;
+  }
+}

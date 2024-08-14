@@ -8,11 +8,13 @@ class CardTreatment extends HTMLElement {
   connectedCallback() {
     const imageSrc = this.dataset.imageSrc || 'https://placehold.co/400';
     const pageLink = this.dataset.pageLink || 'https://www.google.com/';
-    this.shadowRoot.innerHTML = `
-        <link rel = "stylesheet" href = "css/styles.css">
+    const cssPathPrefix = this.dataset.cssPathPrefix || 'css/';
 
-    <link rel = "stylesheet" href = "css/CardTreatment.css">
-    <link rel = "stylesheet" href = "css/SecondaryButton.css">
+    this.shadowRoot.innerHTML = `
+        <link rel = "stylesheet" href = "${cssPathPrefix}styles.css">
+
+    <link rel = "stylesheet" href = "${cssPathPrefix}CardTreatment.css">
+    <link rel = "stylesheet" href = "${cssPathPrefix}SecondaryButton.css">
 
     <link
       rel="stylesheet"
@@ -32,6 +34,7 @@ class CardTreatment extends HTMLElement {
                 data-icon = 'none'
                   data-page-link="${pageLink}"
                   data-color-mode="light"
+                  data-css-path-prefix = "${cssPathPrefix}"
                 >
                  <span slot="text">Learn more</span
                   ><span
