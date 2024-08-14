@@ -92,9 +92,9 @@
 }
 
 #treatments-section .section {
-  padding: 0 40px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  padding: 0 var(--container-margin-x);
+  margin-top: var(--container-margin-y);
+  margin-bottom: var(--container-margin-y);
 }
 #testimonials-section .section {
   margin-top: 0px;
