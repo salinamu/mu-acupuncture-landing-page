@@ -182,7 +182,9 @@
   .navbar.color-change a.hover:hover {
     color: var(--hover);
   }
-  
+  a.hover-color {
+color: var(--hover);
+  }
   .nav-drawer .menu-item {
     display: flex;
     flex-direction: row;

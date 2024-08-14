@@ -49,13 +49,13 @@ this.shadowRoot.innerHTML = `
               on
               <a
                 href="https://search.google.com/local/writereview?placeid=ChIJc0Fdt5dKW4YRirflyye5Wfk"
-                class="hover"
+                class="hover-color"
                 >Google</a
               >
               and
               <a
                 href="https://www.yelp.com/biz/jian-hua-mu-lac-austin?uid=e5oygZxEX1GO3F3vasCCcw&utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)"
-                class="hover"
+                class="hover-color"
                 >Yelp
               </a>
             </div>
