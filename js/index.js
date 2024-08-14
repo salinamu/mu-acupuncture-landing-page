@@ -1,6 +1,10 @@
 const content = document.querySelector("#main-content");
 const scrollers = document.querySelectorAll(".scroller");
 const body = document.body;
+const yearsExperience = document.querySelector("#years-experience");
+let currentYear = new Date().getFullYear();
+let numberYearsExperience = currentYear - 2024 + 30;
+yearsExperience.innerHTML = `${numberYearsExperience}`;
 let prefersReducedMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)"
 ).matches;

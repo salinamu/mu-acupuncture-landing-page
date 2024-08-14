@@ -119,7 +119,7 @@ class CustomHeader extends HTMLElement {
                       <a class="hover" href="${pagesPathPrefix}moxibustion.html">Moxibustion</a>
                     </li>
                     <li>
-                      <a class="hover" href="${pagesPathPrefix}tuina.html">Tuina</a>
+                      <a class="hover" href="${pagesPathPrefix}auriculotherapy.html">Auriculotherapy</a>
                     </li>
 
                   </ul>
@@ -184,7 +184,7 @@ class CustomHeader extends HTMLElement {
                       <a class="hover" ref="${pagesPathPrefix}moxibustion.html">Moxibustion</a>
                     </li>
                     <li>
-                      <a class="hover" href="${pagesPathPrefix}tuina.html">Tuina</a>
+                      <a class="hover" href="${pagesPathPrefix}auriculotherapy.html">Auriculotherapy</a>
                     </li>
                     <li class="spacer"></li>
 
