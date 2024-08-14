@@ -5,7 +5,7 @@ class BlogContent extends HTMLElement {
         this.attachShadow({mode:'open'});
     }
     connectedCallback(){
-      const pageTitle = this.dataset.pageTitle || 'acupuncture';
+      let pageTitle = this.dataset.pageTitle || 'acupuncture';
       const numberOfBullets = this.dataset.numberOfBullets || 1;
       let listItemsHTML = ``;
       let is = 'is';
@@ -19,10 +19,15 @@ class BlogContent extends HTMLElement {
       }
       let capitalizedPageTitle = pageTitle.charAt(0).toUpperCase() + pageTitle.slice(1);
       let hyphenatedPageTitle = '';
+      let shyCounter = 0;
       for (let i = 0; i<pageTitle.length; i++) {
         let currentChar = pageTitle.charAt(i);
         if (currentChar===' ') {
           hyphenatedPageTitle+='-';
+        }
+        else if (currentChar==='&' || shyCounter>0 && shyCounter<4) {
+          shyCounter++;
+          continue;
         }
         else {
           hyphenatedPageTitle+=currentChar;

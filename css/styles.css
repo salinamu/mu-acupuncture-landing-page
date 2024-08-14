@@ -111,8 +111,8 @@ body.noscroll {
 .subheading {
   font-size: var(--h2);
   font-weight: var(--semibold);
-  word-break: break-word;
-  hyphens: auto;
+  hyphens: manual;
+
 }
 .subheading.alt {
   font-size: var(--h2-alt);
@@ -123,12 +123,13 @@ body.noscroll {
 .title {
   font-size: var(--h4);
   font-weight: var(--semibold);
-  word-break: break-word;
-  hyphens: auto;
+  hyphens: manual;
 }
 .subtitle {
   font-size: var(--h7);
   font-weight: var(--semibold);
+  hyphens: manual;
+
 }
 .p {
   font-size: var(--body1);
