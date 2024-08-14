@@ -1,15 +1,15 @@
 class CustomHeader extends HTMLElement {
-    constructor() {
-        super();
-        this.attachShadow({mode: 'open'});
-    }
-    connectedCallback(){
-        const indexPathPrefix = this.dataset.indexPathPrefix || './';
-        const pagesPathPrefix = this.dataset.pagesPathPrefix || 'html/';
-        const cssPathPrefix = this.dataset.cssPathPrefix || 'css/';
-        const imagesPathPrefix = this.dataset.imagesPathPrefix || 'images/';
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
+  }
+  connectedCallback() {
+    const indexPathPrefix = this.dataset.indexPathPrefix || "./";
+    const pagesPathPrefix = this.dataset.pagesPathPrefix || "html/";
+    const cssPathPrefix = this.dataset.cssPathPrefix || "css/";
+    const imagesPathPrefix = this.dataset.imagesPathPrefix || "images/";
 
-this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = `
  <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
@@ -186,6 +186,7 @@ this.shadowRoot.innerHTML = `
                     <li>
                       <a class="hover" href="${pagesPathPrefix}tuina.html">Tuina</a>
                     </li>
+                    <li class="spacer"></li>
 
                   </ul>
                 </div>
@@ -194,6 +195,11 @@ this.shadowRoot.innerHTML = `
                 <a class="hover" href="${pagesPathPrefix}contact.html">Contact</a>
               </li>
               <li class="spacer"></li>
+              <li class="spacer"></li>
+              <li class="spacer"></li>
+              <li class="spacer"></li>
+
+
             </ul>
           </div>
         </div>
@@ -202,118 +208,122 @@ this.shadowRoot.innerHTML = `
 
 `;
 
-const primaryNav = this.shadowRoot.querySelector(".primary-nav");
-const primaryNavbar = this.shadowRoot.querySelector(".primary-nav .navbar");
-const navLogo = this.shadowRoot.querySelector(".navbar .logo");
-const navDrawer = this.shadowRoot.querySelector(".nav-drawer");
-const openMenuIcon = this.shadowRoot.querySelector("#open-menu-icon");
-const body = document.body;
-const primaryNavbarCollapsibles =
-  primaryNavbar.querySelectorAll(".collapsible");
-const navDrawerCollapsibles = navDrawer.querySelectorAll(".collapsible");
-const onClickCollapsibles = this.shadowRoot.querySelectorAll(".collapsible.on-click");
+    const primaryNav = this.shadowRoot.querySelector(".primary-nav");
+    const primaryNavbar = this.shadowRoot.querySelector(".primary-nav .navbar");
+    const navLogo = this.shadowRoot.querySelector(".navbar .logo");
+    const navDrawer = this.shadowRoot.querySelector(".nav-drawer");
+    const openMenuIcon = this.shadowRoot.querySelector("#open-menu-icon");
+    const body = document.body;
+    const primaryNavbarCollapsibles =
+      primaryNavbar.querySelectorAll(".collapsible");
+    const navDrawerCollapsibles = navDrawer.querySelectorAll(".collapsible");
+    const onClickCollapsibles = this.shadowRoot.querySelectorAll(
+      ".collapsible.on-click"
+    );
 
-handlePrimaryNavbarCollapsibles();
-  handleToggleNavDrawer();
-  handleOnClickCollapsibles();
-  openMenuIcon.addEventListener("click", function () {
-    navDrawer.classList.toggle("open");
-    closeNavDrawerCollapsibles();
+    handlePrimaryNavbarCollapsibles();
     handleToggleNavDrawer();
-  });
-  window.addEventListener("scroll", handleScroll);
-  window.addEventListener("resize", (event) => {
-    if (window.innerWidth > 1045 && navDrawer.classList.contains("open")) {
-      navDrawer.classList.remove("open");
+    handleOnClickCollapsibles();
+    openMenuIcon.addEventListener("click", function () {
+      navDrawer.classList.toggle("open");
+      closeNavDrawerCollapsibles();
       handleToggleNavDrawer();
-    }
-  });
+    });
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", (event) => {
+      if (window.innerWidth > 1045 && navDrawer.classList.contains("open")) {
+        navDrawer.classList.remove("open");
+        handleToggleNavDrawer();
+      }
+    });
 
-function handleToggleNavDrawer() {
-    handleScroll();
-    if (navDrawer.classList.contains("open")) {
-      window.removeEventListener("scroll", handleScroll);
-      openMenuIcon.classList.add("close");
-      setNavbarScrolled(true);
-      body.classList.add("noscroll");
-      primaryNavbar.classList.remove("drop-shadow");
-    } else {
-      window.addEventListener("scroll", handleScroll);
-      openMenuIcon.classList.remove("close");
-      body.classList.remove("noscroll");
+    function handleToggleNavDrawer() {
+      handleScroll();
+      if (navDrawer.classList.contains("open")) {
+        window.removeEventListener("scroll", handleScroll);
+        openMenuIcon.classList.add("close");
+        setNavbarScrolled(true);
+        body.classList.add("noscroll");
+        primaryNavbar.classList.remove("drop-shadow");
+      } else {
+        window.addEventListener("scroll", handleScroll);
+        openMenuIcon.classList.remove("close");
+        body.classList.remove("noscroll");
+      }
     }
-  }
-  
-  function handleScroll() {
-    if (window.scrollY >= 10) {
-      setNavbarScrolled(true);
-    } else {
-      setNavbarScrolled(false);
+
+    function handleScroll() {
+      if (window.scrollY >= 10) {
+        setNavbarScrolled(true);
+      } else {
+        setNavbarScrolled(false);
+      }
     }
-  }
-  
-  
-  function handlePrimaryNavbarCollapsibles() {
-    primaryNavbarCollapsibles.forEach((collapsible) => {
-      const content = collapsible.querySelector(".collapsible-content");
-      const menuLabel = collapsible.querySelector(".menu-label");
-      const menuItem = collapsible.querySelector(".menu-item");
 
-      collapsible.addEventListener("mouseenter", () => {
-        menuLabel.classList.add("stay-hovered");
-        menuItem.querySelector(".material-symbols-rounded").classList.add("stay-hovered");
+    function handlePrimaryNavbarCollapsibles() {
+      primaryNavbarCollapsibles.forEach((collapsible) => {
+        const content = collapsible.querySelector(".collapsible-content");
+        const menuLabel = collapsible.querySelector(".menu-label");
+        const menuItem = collapsible.querySelector(".menu-item");
 
-        content.classList.add("open");
+        collapsible.addEventListener("mouseenter", () => {
+          menuLabel.classList.add("stay-hovered");
+          menuItem
+            .querySelector(".material-symbols-rounded")
+            .classList.add("stay-hovered");
+
+          content.classList.add("open");
+        });
+
+        collapsible.addEventListener("mouseleave", () => {
+          content.classList.remove("open");
+          menuLabel.classList.remove("stay-hovered");
+          menuItem
+            .querySelector(".material-symbols-rounded")
+            .classList.remove("stay-hovered");
+        });
       });
-  
-      collapsible.addEventListener("mouseleave", () => {
+    }
+
+    function closeNavDrawerCollapsibles() {
+      navDrawerCollapsibles.forEach((collapsible) => {
+        const content = collapsible.querySelector(".collapsible-content");
+        const menuLabel = collapsible.querySelector(".menu-label");
         content.classList.remove("open");
+        collapsible.querySelector(".arrow-down").classList.remove("rotate180");
         menuLabel.classList.remove("stay-hovered");
-        menuItem.querySelector(".material-symbols-rounded").classList.remove("stay-hovered");
+      });
+    }
+    function handleOnClickCollapsibles() {
+      onClickCollapsibles.forEach((collapsible) => {
+        const content = collapsible.querySelector(".collapsible-content");
+        const menuLabel = collapsible.querySelector(".menu-label");
+        collapsible.addEventListener("click", () => {
+          content.classList.toggle("open");
+          collapsible
+            .querySelector(".arrow-down")
+            .classList.toggle("rotate180");
+          menuLabel.classList.toggle("stay-hovered");
+        });
+      });
+    }
 
-      });
-    });
-  }
-  
-  function closeNavDrawerCollapsibles() {
-    navDrawerCollapsibles.forEach((collapsible) => {
-      const content = collapsible.querySelector(".collapsible-content");
-      const menuLabel = collapsible.querySelector(".menu-label");
-      content.classList.remove("open");
-      collapsible.querySelector(".arrow-down").classList.remove("rotate180");
-      menuLabel.classList.remove("stay-hovered");
-    });
-  }
-  function handleOnClickCollapsibles() {
-    onClickCollapsibles.forEach((collapsible) => {
-      const content = collapsible.querySelector(".collapsible-content");
-      const menuLabel = collapsible.querySelector(".menu-label");
-      collapsible.addEventListener("click", () => {
-        content.classList.toggle("open");
-        collapsible.querySelector(".arrow-down").classList.toggle("rotate180");
-        menuLabel.classList.toggle("stay-hovered");
-      });
-    });
-  }
-  
-  function setNavbarScrolled(scrolled) {
-    if (scrolled) {
-      primaryNav.classList.add("scrolled");
-      primaryNavbar.classList.add("color-change");
-      primaryNavbar.classList.add("drop-shadow");
-      navLogo.classList.add("scrolled");
-      openMenuIcon.classList.add("color-change");
-    } else {
-      primaryNav.classList.remove("scrolled");
-      primaryNavbar.classList.remove("color-change");
-      primaryNavbar.classList.remove("drop-shadow");
-      navLogo.classList.remove("scrolled");
-      openMenuIcon.classList.remove("color-change");
+    function setNavbarScrolled(scrolled) {
+      if (scrolled) {
+        primaryNav.classList.add("scrolled");
+        primaryNavbar.classList.add("color-change");
+        primaryNavbar.classList.add("drop-shadow");
+        navLogo.classList.add("scrolled");
+        openMenuIcon.classList.add("color-change");
+      } else {
+        primaryNav.classList.remove("scrolled");
+        primaryNavbar.classList.remove("color-change");
+        primaryNavbar.classList.remove("drop-shadow");
+        navLogo.classList.remove("scrolled");
+        openMenuIcon.classList.remove("color-change");
+      }
     }
   }
-
-
-    }
 }
 
-customElements.define('custom-header', CustomHeader);
+customElements.define("custom-header", CustomHeader);
