@@ -13,6 +13,7 @@ button {
     border: none;
     gap: 8px;
     color: var(--white);
+    cursor: pointer;
   }
   button.primary {
     border-radius: 1000px;

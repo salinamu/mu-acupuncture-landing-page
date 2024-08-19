@@ -66,7 +66,7 @@ class CustomHeader extends HTMLElement {
         <div class="primary-nav">
           <div class="navbar">
             <div class="navbar-inner fade-in">
-              <div id="spacer"></div>
+              <div id="menu-button-spacer"></div>
               <a
                 class="menu-item hover"
                 href="${pagesPathPrefix}new-patients.html"
@@ -212,7 +212,7 @@ class CustomHeader extends HTMLElement {
     const primaryNavbar = this.shadowRoot.querySelector(".primary-nav .navbar");
     const navLogo = this.shadowRoot.querySelector(".navbar .logo");
     const navDrawer = this.shadowRoot.querySelector(".nav-drawer");
-    const openMenuIcon = this.shadowRoot.querySelector("#open-menu-icon");
+    const menuButton = this.shadowRoot.querySelector("#menu-button");
     const body = document.body;
     const primaryNavbarCollapsibles =
       primaryNavbar.querySelectorAll(".collapsible");
@@ -224,7 +224,7 @@ class CustomHeader extends HTMLElement {
     handlePrimaryNavbarCollapsibles();
     handleToggleNavDrawer();
     handleOnClickCollapsibles();
-    openMenuIcon.addEventListener("click", function () {
+    menuButton.addEventListener("click", function () {
       navDrawer.classList.toggle("open");
       closeNavDrawerCollapsibles();
       handleToggleNavDrawer();
@@ -241,13 +241,13 @@ class CustomHeader extends HTMLElement {
       handleScroll();
       if (navDrawer.classList.contains("open")) {
         window.removeEventListener("scroll", handleScroll);
-        openMenuIcon.classList.add("close");
+        menuButton.classList.add("close");
         setNavbarScrolled(true);
         body.classList.add("noscroll");
         primaryNavbar.classList.remove("drop-shadow");
       } else {
         window.addEventListener("scroll", handleScroll);
-        openMenuIcon.classList.remove("close");
+        menuButton.classList.remove("close");
         body.classList.remove("noscroll");
       }
     }
@@ -314,13 +314,13 @@ class CustomHeader extends HTMLElement {
         primaryNavbar.classList.add("color-change");
         primaryNavbar.classList.add("drop-shadow");
         navLogo.classList.add("scrolled");
-        openMenuIcon.classList.add("color-change");
+        menuButton.classList.add("color-change");
       } else {
         primaryNav.classList.remove("scrolled");
         primaryNavbar.classList.remove("color-change");
         primaryNavbar.classList.remove("drop-shadow");
         navLogo.classList.remove("scrolled");
-        openMenuIcon.classList.remove("color-change");
+        menuButton.classList.remove("color-change");
       }
     }
   }
