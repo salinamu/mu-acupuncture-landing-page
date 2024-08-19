@@ -382,10 +382,6 @@ ul.nav-drawer-inner {
   #menu-item-contact {
     display: none;
   }
-  #menu-button {
-    display: run-in;
-    margin: calc(var(--primary-nav-height) / 2 - 18px / 2) 0;
-  }
 }
 @media screen and (min-width: 1045px) {
   #menu-button-spacer {
