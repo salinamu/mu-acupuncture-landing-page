@@ -47,9 +47,10 @@
   align-items: center;
   gap: var(--container-margin-x);
 }
-#what-we-treat-section {
+#what-we-treat-section .element-block {
   display: flex;
   flex-direction: column;
+  gap: 16px;
 }
 #about-section .element-block {
   display: flex;
