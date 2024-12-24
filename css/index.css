@@ -47,7 +47,7 @@
   align-items: center;
   gap: var(--container-margin-x);
 }
-#what-we-treat-section {
+#what-we-treat-section .text-area {
   text-align: center;
 }
 #about-section .element-block {
