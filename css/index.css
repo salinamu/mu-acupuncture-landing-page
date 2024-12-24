@@ -47,7 +47,10 @@
   align-items: center;
   gap: var(--container-margin-x);
 }
-
+#what-we-treat-section {
+  display: flex;
+  flex-direction: column;
+}
 #about-section .element-block {
   display: flex;
   flex-direction: column;
