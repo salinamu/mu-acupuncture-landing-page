@@ -26,7 +26,7 @@ class CustomHeader extends HTMLElement {
               id="menu-item-location"
             >
               <span class="material-symbols-rounded"> location_on </span>
-              <div class="text-area">300 Beardsley Ln, Austin, TX 78746</div>
+              <div class="text-area">300 Beardsley Ln Building E, Austin, TX 78746</div>
             </a>
             <a
               class="menu-item hover"
