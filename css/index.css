@@ -56,10 +56,11 @@
   gap: 16px;
 }
 #about-section .image-frame {
-  width: 100%;
-  border-radius: 16px;
+  width: 70%;
+  border-radius: 1000px;
   overflow: hidden;
   filter: var(--drop-shadow);
+  margin: 0 auto;
 }
 
 #about-section .grid,
@@ -72,7 +73,7 @@
 }
 
 #about-section img {
-  aspect-ratio: 3/4;
+  aspect-ratio: 1/1;
   width: 100%;
   vertical-align: middle;
   object-fit: cover;
@@ -99,10 +100,12 @@
   margin-bottom: var(--container-margin-y);
 }
 #testimonials-section .section {
-  margin-top: 0px;
-  margin-bottom: 0px;
+  /* margin-top: 0px;
+  margin-bottom: 0px; */
 }
-
+#testimonials-section .text-area {
+  text-align: center;
+}
 #testimonials-section .section,
 #treatments-section .section {
   flex-direction: column;
@@ -169,12 +172,10 @@
   }
   }
 
-#about-section secondary-button .arrow-right,
-#hero-section secondary-button .arrow-right {
+secondary-button .arrow-right {
   transition: transform 350ms ease-out;
 }
-#about-section secondary-button:hover .arrow-right,
-#hero-section secondary-button:hover .arrow-right {
+secondary-button:hover .arrow-right {
   transform: translateX(8px);
 }
 
