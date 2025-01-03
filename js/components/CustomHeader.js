@@ -37,7 +37,7 @@ class CustomHeader extends HTMLElement {
               <div class="text-area">512-363-0676</div>
             </a>
           </div>
-          <div class="menu-item" id="menu-item-rating">
+          <!-- <div class="menu-item" id="menu-item-rating">
             <div>
               <span class="material-symbols-rounded"> star </span>
               <span class="material-symbols-rounded"> star </span>
@@ -59,7 +59,7 @@ class CustomHeader extends HTMLElement {
                 >Yelp
               </a>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
       <div>
