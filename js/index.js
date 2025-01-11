@@ -3,7 +3,7 @@ const scrollers = document.querySelectorAll(".scroller");
 const body = document.body;
 const yearsExperience = document.querySelector("#years-experience");
 let currentYear = new Date().getFullYear();
-let numberYearsExperience = currentYear - 2024 + 25;
+let numberYearsExperience = currentYear - 2024 + 38;
 yearsExperience.innerHTML = `${numberYearsExperience}`;
 let prefersReducedMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)"
